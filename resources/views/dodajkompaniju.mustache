@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/jquery-confirm.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <title>Kompanije</title>
+</head>
+<body>
+
+<div class="container">
+    <nav class="navbar navbar-default">
+
+
+        <ul class="nav nav-pills" id="navMeni">
+            <li role="presentation"><a href="/index">Home</a></li>
+            <li role="presentation"><a href="/oglasi">Oglasi kompanija</a></li>
+            <li role="presentation"><a href="/kompanije">Kompanije</a></li>
+            <li role="presentation"><a href="/hr">Human Resources</a></li>
+        </ul>
+    </nav>
+    <br>
+
+    <h1>
+        Dodavanje kompanija
+    </h1>    <br>
+
+
+    <br>
+
+
+    <form action="/kompanije/dodaj" method="post">
+        <div class="form-group">
+            <label>Ime kompanije:</label>
+            <input type="text" class="form-control" name="ime" placeholder="Ime kompanije">
+        </div>
+        <div class="form-group">
+            <label>Opis:</label>
+            <input type="text" class="form-control" name="opis" placeholder="Opis kompanije">
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="text" class="form-control" name="email" placeholder="Unesite email">
+        </div>
+        <div class="form-group">
+            <label>Adresa:</label>
+            <input type="text" class="form-control" name="adresa" placeholder="Adresa kompanije">
+        </div>
+        <br>
+        <button style="float: left" type="submit" class="btn btn-success" style="float:right">Dodaj kompaniju</button>
+    </form>
+
+
+
+</div>
+</body>
+</html>

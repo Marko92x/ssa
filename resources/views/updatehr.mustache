@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <title>Update hr</title>
+</head>
+<body>
+<h1>Update hr-a</h1>
+<div id="addForm" style="width:30%;">
+    <form action="/hr/{{hr.id}}/izmeni" method="post">
+        <div class="form-group">
+            <label for="model">Email:</label>
+            <input type="text" class="form-control" name="email" value="{{hr.email}}"/>
+        </div>
+
+        <div class="form-group">
+
+            <label for="man_id">Kompanija</label>
+            <select name="id_kompanije" class="form-control" id="id_kompanije">
+                {{#kompanije}}
+                    <option value="{{id}}">{{ime}}</option>
+                {{/kompanije}}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Izmeni hr</button>
+    </form>
+</div>
+
+
+
+</body>
+</html>

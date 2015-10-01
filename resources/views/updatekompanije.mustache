@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <title>Update kompanije</title>
+</head>
+<body>
+<h1>Update kompanije</h1>
+<div id="addForm" style="width:30%;">
+    <form action="/kompanije/{{kompanije.id}}/izmeni" method="post">
+        <div class="form-group">
+            <label for="model">Ime kompanije:</label>
+            <input type="text" class="form-control" name="ime" value="{{kompanije.ime}}"/>
+        </div>
+        <div class="form-group">
+            <label for="year">Opis:</label>
+            <input type="text" class="form-control" name="opis" value="{{kompanije.opis}}"/>
+        </div>
+        <div class="form-group">
+            <label for="year">Email:</label>
+            <input type="text" class="form-control" name="email" value="{{kompanije.email}}"/>
+        </div>
+        <div class="form-group">
+            <label for="year">Adresa:</label>
+            <input type="text" class="form-control" name="adresa" value="{{kompanije.adresa}}"/>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary">Izmeni kompaniju</button>
+    </form>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/jquery-confirm.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <title>Hr</title>
+</head>
+<body>
+
+<div class="container">
+    <nav class="navbar navbar-default">
+
+
+        <ul class="nav nav-pills" id="navMeni">
+            <li role="presentation"><a href="/index">Home</a></li>
+            <li role="presentation"><a href="/oglasi">Oglasi kompanija</a></li>
+            <li role="presentation"><a href="/kompanije">Kompanije</a></li>
+            <li role="presentation"><a href="/hr">Human Resources</a></li>
+        </ul>
+    </nav>
+    <br>
+
+    <h1>
+        Dodavanje hr menadzera
+    </h1>    <br>
+
+
+    <br>
+
+
+    <form action="/hr/dodaj" method="post">
+        <div class="form-group">
+            <label>Ime:</label>
+            <input type="text" class="form-control" name="ime" placeholder="Ime">
+        </div>
+        <div class="form-group">
+            <label>Prezime:</label>
+            <input type="text" class="form-control" name="prezime" placeholder="Prezime">
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="text" class="form-control" name="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label>Kompanija</label>
+            <select name="id_kompanije" class="form-control" id="id_kompanije">
+                {{#kompanije}}
+                    <option value="{{id}}">{{ime}}</option>
+                {{/kompanije}}
+            </select>
+        </div>
+        <br>
+        <button style="float: left" type="submit" class="btn btn-success">Dodaj hr</button>
+    </form>
+
+
+
+</div>
+</body>
+</html>
